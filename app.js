@@ -50,9 +50,9 @@ const drawColorPicker = (color1, color2, color3) => {
             const val = Math.pow(x3, 2)+Math.pow(y3, 2);
             const D=Math.sqrt(val);
             const a = D/maxDistance;
-            const r = (color1[0]*c4 + color3[0]*b2)/(c4+b2)*c3 + color2[0] * b1;
-            const g = (color1[1]*c4 + color3[1]*b2)/(c4+b2)*c3 + color2[1] * b1;
-            const b = (color1[2]*c4 + color3[2]*b2)/(c4+b2)*c3 + color2[2] * b1;  
+            const r = parseInt((color1[0]*c4 + color3[0]*b2)/(c4+b2)*c3 + color2[0] * b1);
+            const g = parseInt((color1[1]*c4 + color3[1]*b2)/(c4+b2)*c3 + color2[1] * b1);
+            const b = parseInt((color1[2]*c4 + color3[2]*b2)/(c4+b2)*c3 + color2[2] * b1);  
             const color="rgba("+r+","+g+","+b+","+a+")";
             const colorButton = document.createElement("div")
             colorButton.setAttribute("style",`background:${color}; position:absolute; left:${xNew+j}px; top:${i}px;width:1px;height:1px;`)
